@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOHO CORPORATION HIRING</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>ZOHO CORPORATION HIRING</h1>
+
+    <form action="/submit-form" method="post" enctype="multipart/form-data">
+        <div class="section">
+            <h2>Basic Details</h2>
+            <label for="first-name" class="required">First Name</label>
+            <input type="text" id="first-name" name="first_name" required>
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name">
+
+            <label for="email" class="required">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="resume" class="file-upload">Resume (Upload PDF)</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
+        </div>
+
+        <div class="section">
+            <label for="contact">Contact</label>
+            <input type="text" id="contact" name="contact">
+
+            <label for="year-graduation" class="required">Year of Graduation</label>
+            <input type="number" id="year-graduation" name="year_graduation" required>
+
+            <label for="gender" class="required">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <h3>Experience</h3>
+            <label for="experience" class="required">Experience In Years</label>
+            <input type="number" id="experience" name="experience" required>
+
+            <label for="current-employer">Current Employer</label>
+            <input type="text" id="current-employer" name="current_employer">
+
+            <label for="current-ctc" class="required">Current CTC (In Lakhs Per Annum)</label>
+            <input type="number" id="current-ctc" name="current_ctc" step="0.01" required>
+
+            <label for="expected-ctc" class="required">Expected CTC (In Lakhs Per Annum)</label>
+            <input type="number" id="expected-ctc" name="expected_ctc" step="0.01" required>
+
+            <label for="notice-period" class="required">Notice Period</label>
+            <input type="text" id="notice-period" name="notice_period" required>
+
+            <label for="skill-set" class="required">Skill Set</label>
+            <textarea id="skill-set" name="skill_set" rows="4" required></textarea>
+            
+            <label for="skills">Add Skills</label>
+            <input type="text" id="skills" name="skills">
+        </div>
+
+        <div class="section">
+            <h3>Additional Information</h3>
+            <label for="vacancy-source" class="required">How did you come across this vacancy?</label>
+            <input type="text" id="vacancy-source" name="vacancy_source" required>
+
+            <label for="current-location" class="required">Current Location</label>
+            <input type="text" id="current-location" name="current_location" required>
+
+            <label for="preferred-location">Preferred Location</label>
+            <input type="text" id="preferred-location" name="preferred_location">
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
