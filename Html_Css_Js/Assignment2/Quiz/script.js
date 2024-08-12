@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentQuestionIndex = 0;
     let score = 0;
 
-    // Questions are hardcoded in the JavaScript file
     const questions = [
         {
             "question": "Which tag is used to create a hyperlink in HTML?",
@@ -97,6 +96,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initialize with first question
     loadQuestion();
 });
