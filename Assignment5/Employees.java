@@ -1,20 +1,37 @@
-import java.util.Scanner;
-class Employee {
-    private String name;
+package assignment5;
+/*
+ * Add getEmployeeDetails method to the class 'Employee' and extend it in subclasses representing 
+ * different types of employees such as HourlyEmployee and SalariedEmployee and overload getEmployeeDetails. 
+ * Demonstrate polymorphism by printing various types of Employees by using Parent Class reference.
+ */
+public class Employees {
+	
+    String name;
 
-    public Employee(String name) {
+    public Employees(String name) {
         this.name = name;
     }
 
     public String getEmployeeDetails() {
         return "Name: " + name;
     }
+    
+    public static void main(String[] args) {
+        
+        Employees e1 = new HourlyEmployee("ANU", 120);
+        Employees e2 = new SalariedEmployee("SUBHA", 400000);
+
+
+        System.out.println(e1.getEmployeeDetails());
+        System.out.println(e2.getEmployeeDetails());
+    }
 }
 
-class HourlyEmployee extends Employee {
-    private double hourlyRate;
+class HourlyEmployee extends Employees {
+	
+    float hourlyRate;
 
-    public HourlyEmployee(String name, double hourlyRate) {
+    public HourlyEmployee(String name, float hourlyRate) {
         super(name);
         this.hourlyRate = hourlyRate;
     }
@@ -25,37 +42,20 @@ class HourlyEmployee extends Employee {
     }
 }
 
-class SalariedEmployee extends Employee {
-    private double annualSalary;
+class SalariedEmployee extends Employees {
+	
+    float annualSalary;
 
-    public SalariedEmployee(String name, double annualSalary) {
+    public SalariedEmployee(String name, float annualSalary) {
         super(name);
         this.annualSalary = annualSalary;
     }
 
     @Override
     public String getEmployeeDetails() {
+    	
         return super.getEmployeeDetails() + ", Annual Salary: " + annualSalary;
     }
 }
 
-public class Employees {
-    public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
-	System.out.println("Enter the HourlyEmployee : ");
-	String HEname = obj.nextLine();
-	System.out.println("Enter the Salary : ");
-	double Hsalary = obj.nextDouble();
-	System.out.println("Enter the SalariedEmployee : ");
-	String SEname = obj.nextLine();
-	System.out.println("Enter the Salary : ");
-	double Ssalary = obj.nextDouble();
 
-        Employee e1 = new HourlyEmployee(HEname, Hsalary);
-        Employee e2 = new SalariedEmployee(SEname, Ssalary);
-
-
-        System.out.println(e1.getEmployeeDetails());
-        System.out.println(e2.getEmployeeDetails());
-    }
-}
