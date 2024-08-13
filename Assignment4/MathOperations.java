@@ -11,36 +11,36 @@ public class MathOperations {
 	
 	public static void main(String[] args) {
 		
-		MathOperations m = new MathOperations();
-		
-		Scanner obj = new Scanner(System.in);
-		
-		System.out.println("Enter the First Number : ");
-		int a = obj.nextInt();
-		System.out.println("Enter the First Number : ");
-		int b = obj.nextInt();
-		
-		System.out.println("The Addition is : "+add(a,b));
-		System.out.println("The Subtraction is : "+subtract(a,b));
-		System.out.println("The Multiplication is : "+ m.multiply(a,b));
-		System.out.println("The Division is : "+m.divide(a,b));
-		
+		System.out.println(add(1,2));
+		System.out.println(add(4.0,2));
+		System.out.println(subtract(3,1));
+		System.out.println(subtract(3,1.0));
+		System.out.println(multiply(6,2));
+		System.out.println(multiply(6.0,2.0));
+		System.out.println(divide(6,2));
+		System.out.println(divide(6.0,2));
+
 	}
 	
 	static int add(int x, int y) {
 		return x+y ;
 	}
-	
+	static double add(double x, double y) {
+		return x+y ;
+	}
 	static int subtract(int x , int y) {
 		return x-y;
 	}
-	
-	int multiply(int x , int y) {
+	static double subtract(double x, double y) {
+		return x-y ;
+	}
+	static int multiply(int x , int y) {
 		return x*y ;
 	}
-	
-	double divide(double x , double y) {
+	static double multiply(double x , double y) {
+		return x*y ;
+	}
+	static double divide(double x , double y) {
 		return x/y ;
 	}
-
 }
