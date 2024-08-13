@@ -11,7 +11,7 @@ public class Login {
 	
 	static {
 		
-		validusername = "AnuBal";
+		validusername = "Anu";
 		validpassword ="Password";
 		
 	}
