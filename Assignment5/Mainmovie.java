@@ -1,4 +1,9 @@
-class Movie {
+package assignment4;
+/*
+ * 3. Create hierarchy from Movie class with Child classes of different genre movies 
+ * like RomComMovie, ThrillerMovie, etc. Demonstrate polymorphism using them.
+ */
+public class Movie {
     String title;
 
     public Movie(String title) {
@@ -12,6 +17,14 @@ class Movie {
     public String getMovieDetails() {
         return "Title: " + title + ", Genre: " + getGenre();
     }
+    
+    public static void main(String[] args) {
+        Movie movie1 = new RomComMovie("Romantic Nights");
+        Movie movie2 = new ThrillerMovie("Thrill Seeker");
+
+        System.out.println(movie1.getMovieDetails());
+        System.out.println(movie2.getMovieDetails());
+    }
 }
 
 class RomComMovie extends Movie {
@@ -19,7 +32,6 @@ class RomComMovie extends Movie {
         super(title);
     }
 
-    @Override
     public String getGenre() {
         return "Romantic Comedy";
     }
@@ -30,18 +42,9 @@ class ThrillerMovie extends Movie {
         super(title);
     }
 
-    @Override
     public String getGenre() {
         return "Thriller";
     }
 }
 
-public class Mainmovie {
-    public static void main(String[] args) {
-        Movie movie1 = new RomComMovie("Romantic Nights");
-        Movie movie2 = new ThrillerMovie("Thrill Seeker");
 
-        System.out.println(movie1.getMovieDetails());
-        System.out.println(movie2.getMovieDetails());
-    }
-}
