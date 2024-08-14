@@ -4,7 +4,9 @@ public class Dayweek{
     public enum Weekday {
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
     }
-
+//Weekday.MONDAY.Ordinal();
+//Values();
+//Valueof();
 public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("1 for Monday \n2 for Tuesday \n3 for Wednesday \n4 for Thursday \n5 for Friday \n6 for Saturday \n7 for Sunday \nEnter a number : ");
