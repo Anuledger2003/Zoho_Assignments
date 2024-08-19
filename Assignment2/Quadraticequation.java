@@ -1,8 +1,6 @@
-pacakge assignment1;
-
 import java.util.Scanner; 
 
-class Quadraticequation{
+public class Quadraticequation{
     public static void main(String[] args) {
         System.out.println("Let's solve Quadratic Equation --> ax^2 + bx + c");
         Scanner obj = new Scanner(System.in);
